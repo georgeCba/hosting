@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	list-style-type: none;
+	text-decoration: none;
+	outline: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+a:not([class]) {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	border: none;
+	box-shadow: none;
+}
