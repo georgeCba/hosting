@@ -207,7 +207,7 @@ async function gotoSearch(){
     return result;
 }
 gotoSearch().then(function(res){
-    window.location.href="#gifImageId",true;
+    //window.location.href="#gifImageId",true;
     console.log("windows location executed: "+res);
 })
 
