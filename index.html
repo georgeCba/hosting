@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/StylesSD.css" id="themeStyleSelectorId">
+    <title>GifOS</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="headerTitle">
+            ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
+        </h1>
+    </header>
+
+    <main class="container" id="conteinerId">
+        <nav class="navBarContainer" id="navBarContainerId">
+            <div class="navBarLogoContainer" id="logo">
+                <img class="returnArrow" src="./images/arrow.svg" alt="" id="returnArrowId"/>
+                <img class="logoType" src="./images/gifOF_logo.png" alt="logotipo" id="logoId"/>
+            </div>
+    
+            <div class="navbarOptions" id="navBarItemsId">
+                <button class="navBarBtn" id="btnCreateGifId">Crear Guifos</button>
+    
+                <div class="navBarBtnDropdown">
+                    <button class="btnThemeSelector" id="themeSelectorId"> <span class="btnTextContent">Elegir Tema</span></button>
+                    <div class="dropDownList" id="dropDownListId" style="display:none">
+                        <a href="#" class="dropDownThemeColorOption" id="sailorDayId">Sailor Day</a>
+                        <a href="#" class="dropDownThemeColorOption" id="sailorNightId">Sailor Night</a>
+                    </div>
+                </div>
+    
+                <button class="btnNavBarMyGifs" id="btnMyGifsId">
+                    <span class="underline">M</span>is Guifos
+                </button>
+            </div>
+        </nav>
+
+        <section class="searchBarContainer" id="searchSectionBarId">
+            <div class="searchBox">
+                <div class="searchBoxForm">
+                    <h2 class="searchBoxFormHeader">Buscar</h2>
+                    <div class="searchBoxFormBarContainer">
+                        <input
+                            class="inputBar"
+                            type="search"
+                            id="searchBarId"
+                            aria-label="Barra de búsqueda para gifs e imágenes"
+                            placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+                            autocomplete="off"
+                        />
+                        <button class="btnSearch" id="searchButtonid" disabled>
+                            <span class="btnSeachText">Buscar</span>
+                        </button>
+                    </div>
+                
+                    <div class="searchBoxSuggestions" id="searchSuggestionsId" style="display:none;">
+                        <!-- Aqui se insertaran las sugerencias del autocompletar -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="searchTags" id="searchTagsId">
+                <!-- Aqui se pondran los botones que tienen las sugerencias de busquedas -->
+            </div>
+
+        </section>
+
+        <section class="suggestions" id="suggestionsSectionId">
+            <h2 class="titleInputBar" id="suggestedTitleId">.</h2>
+            <div class="gifGridSmall" id="suggestedContainerId">
+                <!-- Aqui se van a insertar los gifs sugeridos -->
+            </div>
+        </section>
+
+        <section class="trends" id="trendSectionId">
+            <h2 class="titleInputBar">Tendencias:</h2>
+
+            <div class="gifGridSmall" id="trendGridId">
+               <!-- Aca se insertan los trends -->    
+            </div>
+		 </section>
+         
+         <section class="search" id="searchSectionId">
+            <!-- Botones con la sugerencia de busquedas -->
+            <h2 class="titleInputBar" id="searchResultTitleId">.</h2>
+            <div class="gifGridLarge" id="searchGridId">
+                <!-- aqui van los gifs de la busqueda -->
+            </div>
+         </section>
+         
+         <section class="gifCreator" id="gifCreatorId">
+            <div class="windowElement" id="step1Id">
+                <div class="windowHeaderContainer">
+                    <h2 class="windowTitleElement">
+                        Crear Guifos
+                    </h2>
+                </div>
+                
+                <div class="windowContent">
+                    <div class="windowContentText">
+                        <img class="windowContentImg" alt="" src="./images/window_img.png">
+                        <div class="windowContentRoom">
+                            <p class="windowContentRoomHeader">Aquí podrás crear tus propios guifos</p>
+                            <p class="windowContentRoomBody">
+                                Crear tu <strong><em>guifo</em></strong> es muy fácil, graba cualquier imagen con tu cámara y obtén
+                                guifos personalizados. Los pasos para crear tu guifo son:
+                            </p>
+                            <ol class="windowListElement">
+                                <li> <b>1) </b>Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</li>
+                                <li> <b>2) </b>Capturar tu momento guifo</li>
+                                <li> <b>3) </b>Revisar el momento</li>
+                                <li> <b>4) </b>Listo para subir y compartir!</li>
+                            </ol>
+                            <p>
+                                ¿Quieres comenzar a crear tu <strong><em>guifo</em></strong> ahora?
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="windowContentOptions">
+                        <button class="btnCloseWindow" id="createGifCancelId">
+                            Cancelar
+                        </button>
+                        <button class="btnTextPrimaryStart" id="createGifContinueId">
+                            Comenzar
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="windowElement" id="step2Id">
+
+                <div class="windowElementHeader">
+                    <h3 class="windowElementHeaderStyle">Vista Previa</h3>
+                    <button class="windowElementClose" id="closeWindowId"></button>
+                </div>
+                <div class="windowVideoContentFrame">
+                    <video class="windowContentVideo" id="videoFrameId"></video>    
+                    <video class="windowContentVideo" id="gifFrameId"></video>     
+                    
+                    <div class="windowContentCapture">
+                        <button class="btnTextPrimaryCapt" id="startRecordingId">
+                            <span>Capturar</span>
+                        </button>
+                    </div>
+
+                    <div class="gifCreationBarElement" id="step3Id">
+                        <div class="gifCreationTimerConteiner" id="creationBarTimerId" >
+
+                            <div class="timerConteiner" id="timerId">
+                                    <span id="hour">00</span> :
+                                    <span id="min">00</span> :
+                                    <span id="sec">00</span> :
+                                    <span id="milisec">00</span>
+                            </div>
+                            
+                            <div class="controlsConteiner" id="timerLoadingId">
+            
+                                <button class="btnTextPlay" id="playBtnId">
+                                    <span class="btn__text-container">
+                                        ▶
+                                    </span>
+                                </button>
+                                    
+                                <div class="loadingBarConteiner" id="loadingBarId">
+                                    <!-- aqui meteremos la barra de carga -->
+                                    <div class="discreteProgress" id="loadBarId"></div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="gifUploadSection" id="step4Id">
+                                <button class="btnRepeat" id="repeatCaptureId">
+                                    <span>Repetir Captura</span>
+                                </button>
+                                <button class="btnUpload" id="uploadGifId">
+                                    <span >Subir Guifo</span>
+                                </button>
+                            </div>
+
+                            <button class="btnTextReadyStop" id="readyStopBtnId">
+                                <span class="">Listo</span>
+                            </button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="centerWindow">
+                <div class="windowUploadStage" id="step5Id">
+					<div class="windowElementHeader">
+						<h3 class="windowElementHeaderStyle">Subiendo Guifo</h3>
+						<button class="windowElementClose"></button>
+					</div>
+					<div class="windowElementInnerUpload">
+						<img class="gifCreationGlobe" src="./images/globe_img.png" alt="">
+						<p class="gifCreationTitle">Estamos subiendo tu guifo...</p>
+                        <!-- <div class="loadingBarContainer"> -->
+                            <div class="discreteProgress" id="uploadBarId"></div>
+						<p class="gifCreationPBody">
+							Tiempo restante: <span class="linethrough">38 años</span> algunos minutos
+                        </p>
+                    </div>
+                    <div class="windowBottomContentRight">
+                        <button class="btnCloseWindow" id="createGifCancelId2">
+                            Cancelar
+                        </button>
+                    </div>
+				</div>
+            </div>
+
+            <div class="centerWindow">
+                <div class="windowUploadStageSmall" id="step6Id">
+                    <div class="windowElementHeader">
+                        <h3 class="windowElementHeaderStyle">Guifo Subido con Éxito</h3>
+                        <button class="windowElementClose"></button>
+                    </div>
+                    <div class="windowElementGifLt">
+                        <div class="windowElementSplit">
+                            <div class="imgContainer">
+                                <img src="./images/dropdown.svg" alt="Tu Gif" id="gifPreviewId" class="GifPreview">
+                            </div>
+                            <div>
+                                <div class="gifCreationOptionsContainer">
+                                    <p class="gifCreationptionsHeader">Guifo creado con éxito</p>
+                                    <button class="btnFullwidth" id="clipBoardCopyId">
+                                        <span>Copiar Enlace Guifo</span>
+                                    </button>
+                                    <button class="btnFullwidth" id="gifDownloadId">
+                                        <span >Descargar Guifo</span>
+                                    </button>
+                                    <textarea class="hiddenTextCopy" id="copyToCbId"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="windowElementBottomContent">
+                            <button class="btnTextPrimaryOK" id="finishGifCreationBtnId">
+                                <span>Listo</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+
+     <section class="myGifShow" id="myGifShowId">
+        <h2 class="titleInputBar">Mis Guifos:</h2>
+        <div class="gifGridLarge" id="myGifsGridId">
+           <!-- Aqui se deberian insertar los gifos que tengo guardados en el local storage -->
+        </div>
+     </section>
+
+    </main>
+    <script src="./scripts/RecordRTC.min.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/camFeature.js"></script>
+    <script src="./scripts/loadBar.js"></script>    
+    <script src="./scripts/timer.js"></script>
+</body>
+</html>
